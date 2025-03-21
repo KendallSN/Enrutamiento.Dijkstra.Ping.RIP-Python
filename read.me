@@ -1,0 +1,6 @@
+Para trabajar con Dijkstra:
+    -Primero debemos hacer una tranformación de los datos para poder calcular con Dijkstra
+    -Convertidos los datos de Networkx que son las aristas con pesos ("A", "B", 4),a un diccionario de los Nodos
+    con sus vecinos y pesos ('A': {'B': 4},'B': {'A': 4}).
+    -Luego utilizamos el diccionario de nodos con sus vecinos y pesos junto con una cola de prioridad (heapq) 
+    para calcular el camino mas corto usando dijkstra
