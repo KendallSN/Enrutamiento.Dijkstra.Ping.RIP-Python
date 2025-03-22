@@ -13,3 +13,12 @@ Para utilizar ping y el traceroute
     -Ejecutamos el codigo con el comando: python ping-codigo.py
     -Dentro de la ejecución del programa indicamos la ruta a la cual hacer el ping/traceroute (eje: google.com).
 
+Para simular el enrutamiento utilizando RIP (Routing Information Protocol)
+    -Se crean los routers con un nombre y una tabla de rutas vacia.
+    -Se agregan rutas directas entre los routers, agregando una ruta directa con peso 1.
+    -Luego se inicia la iteración para calcular el costo de las rutas.
+    -Para cada entrada (destino y su costo en el vecino), se suma 1 (que representa el costo de la conexión directa) y se verifica si:
+        El destino no existe aún en la tabla actual.
+        O bien, el costo actual es mayor que el costo calculado (costo del vecino + 1).
+        Si alguna de estas condiciones se cumple, se actualiza la tabla del router con la nueva ruta y costo.
+    -En cierta iteración los datos se estibilizan y se mantienen de esa manera al encontrar el mejor camino.
